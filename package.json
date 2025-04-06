@@ -1,0 +1,26 @@
+{
+  "name": "college-website",
+  "version": "1.0.0",
+  "description": "A website for for Central Ayurvedic and Research Institute, Jhansi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeenakshiTripathi9919/college-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeenakshiTripathi9919/college-website/issues"
+  },
+  "homepage": "https://github.com/MeenakshiTripathi9919/college-website#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.0"
+  }
+}
