@@ -264,7 +264,7 @@ nav .navbar-brand {
 
 /* Footer */
 footer {
-  background-color: var(--secondary-color);
+  background-color: var(--dark-bg);
   color: white;
   padding-top: 3rem;
 }
@@ -274,7 +274,7 @@ footer a {
 }
 
 footer a:hover {
-  color: white !important;
+  color: var(--primary-color) !important;
 }
 
 footer .social-icons a {
