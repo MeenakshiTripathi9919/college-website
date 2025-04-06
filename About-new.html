@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - College Website</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 6rem 0;
+        position: relative;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+        opacity: 0.9;
+      }
+
+      /* About Section */
+      .about-section {
+        padding: 5rem 0;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #343a40;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
+        color: #6c757d;
+        margin-bottom: 3rem;
+      }
+
+      .about-img {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-img img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-content {
+        padding-left: 2rem;
+      }
+
+      .about-text {
+        font-size: 1.1rem;
+        color: #6c757d;
+        margin-bottom: 2rem;
+        line-height: 1.8;
+      }
+
+      .about-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+      }
+
+      .about-list li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .about-list li i {
+        color: #fd7e14;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .btn-primary {
+        background-color: #fd7e14;
+        border: none;
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #e06000;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Mission & Vision Section */
+      .mission-vision-section {
+        padding: 5rem 0;
+        background-color: #f8f9fa;
+      }
+
+      .mission-vision-card {
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        background-color: white;
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+
+      .mission-vision-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .mission-vision-icon {
+        width: 80px;
+        height: 80px;
+        background-color: #fd7e14;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        margin-bottom: 2rem;
+      }
+
+      .mission-vision-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: #343a40;
+      }
+
+      .mission-vision-text {
+        color: #6c757d;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      /* History Section */
+      .history-section {
+        padding: 5rem 0;
+      }
+
+      .timeline {
+        position: relative;
+        padding: 2rem 0;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background-color: #e9ecef;
+        transform: translateX(-50%);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+      }
+
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-content {
+        position: relative;
+        width: 45%;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        background-color: white;
+        transition: all 0.3s ease;
+      }
+
+      .timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: auto;
+      }
+
+      .timeline-date {
+        position: absolute;
+        top: 0;
+        width: 120px;
+        padding: 0.5rem 1rem;
+        background-color: #fd7e14;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        font-weight: 600;
+        transform: translateY(-50%);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-date {
+        left: -60px;
+      }
+
+      .timeline-item:nth-child(even) .timeline-date {
+        right: -60px;
+      }
+
+      .timeline-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #343a40;
+      }
+
+      .timeline-text {
+        color: #6c757d;
+        line-height: 1.8;
+      }
+
+      /* Team Section */
+      .team-section {
+        padding: 5rem 0;
+        background-color: #f8f9fa;
+      }
+
+      .team-card {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        background-color: white;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .team-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .team-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .team-content {
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .team-name {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #343a40;
+      }
+
+      .team-position {
+        color: #fd7e14;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .team-text {
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+      }
+
+      .team-social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .team-social a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        transition: all 0.3s ease;
+      }
+
+      .team-social a:hover {
+        background-color: #fd7e14;
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      /* CTA Section */
+      .cta-section {
+        padding: 5rem 0;
+        background-color: #fd7e14;
+        color: white;
+      }
+
+      .cta-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .cta-text {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 5rem 0 2rem;
+        background-color: #343a40;
+        color: white;
+      }
+
+      .footer-logo {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+
+      .footer-text {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.75rem;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 15px;
+        margin-top: 1.5rem;
+      }
+
+      .footer-social a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background-color: #fd7e14;
+        transform: translateY(-3px);
+      }
+
+      .footer-bottom {
+        padding-top: 2rem;
+        margin-top: 3rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Responsive */
+      @media (max-width: 991.98px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .about-content {
+          padding-left: 0;
+          margin-top: 2rem;
+        }
+
+        .timeline::before {
+          left: 30px;
+        }
+
+        .timeline-content {
+          width: calc(100% - 80px);
+          margin-left: 80px !important;
+        }
+
+        .timeline-date {
+          left: -50px !important;
+          right: auto !important;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .hero-section {
+          padding: 5rem 0;
+        }
+
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 1.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">College</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link active" aria-current="page" href="About.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="courses.html">Courses</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="faculty.html">Faculty</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container text-center">
+        <h1 class="hero-title">About Our College</h1>
+        <p class="hero-subtitle">
+          Learn about our history, mission, and the people who make us great
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-img">
+              <img
+                src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="College Campus"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="about-content">
+              <h2 class="section-title">Who We Are</h2>
+              <p class="about-text">
+                Founded in 1980, our college has been a beacon of academic
+                excellence and innovation for over four decades. We are
+                committed to providing quality education that prepares students
+                for the challenges of the modern world.
+              </p>
+              <p class="about-text">
+                Our institution is recognized for its rigorous academic
+                programs, distinguished faculty, and state-of-the-art facilities
+                that create an optimal learning environment for students from
+                diverse backgrounds.
+              </p>
+
+              <ul class="about-list">
+                <li>
+                  <i class="fa fa-check-circle"></i> Accredited by the National
+                  Education Board
+                </li>
+                <li>
+                  <i class="fa fa-check-circle"></i> Ranked among the top 50
+                  colleges nationwide
+                </li>
+                <li>
+                  <i class="fa fa-check-circle"></i> Over 95% placement rate for
+                  graduates
+                </li>
+                <li>
+                  <i class="fa fa-check-circle"></i> Partnerships with leading
+                  industry organizations
+                </li>
+              </ul>
+
+              <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Our Mission & Vision</h2>
+          <p class="section-subtitle">
+            Guiding principles that drive our institution forward
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="mission-vision-card">
+              <div class="mission-vision-icon">
+                <i class="fa fa-bullseye"></i>
+              </div>
+              <h3 class="mission-vision-title">Our Mission</h3>
+              <p class="mission-vision-text">
+                To provide accessible, high-quality education that empowers
+                students with knowledge, skills, and values to excel in their
+                chosen fields and contribute meaningfully to society. We are
+                committed to fostering a culture of innovation, critical
+                thinking, and lifelong learning.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="mission-vision-card">
+              <div class="mission-vision-icon">
+                <i class="fa fa-eye"></i>
+              </div>
+              <h3 class="mission-vision-title">Our Vision</h3>
+              <p class="mission-vision-text">
+                To be a globally recognized institution of academic excellence
+                that nurtures future leaders, pioneers groundbreaking research,
+                and addresses the evolving needs of society. We aspire to create
+                a diverse and inclusive community that drives positive change
+                and sustainable development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Our Journey</h2>
+          <p class="section-subtitle">
+            Key milestones in our college's history
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">1980</div>
+              <h3 class="timeline-title">Foundation</h3>
+              <p class="timeline-text">
+                Our college was established with a vision to provide quality
+                education to students from all backgrounds. The initial campus
+                had just three departments and 200 students.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">1995</div>
+              <h3 class="timeline-title">Expansion</h3>
+              <p class="timeline-text">
+                The college expanded its campus and introduced several new
+                programs in science, technology, and business. The student body
+                grew to over 1,000.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2005</div>
+              <h3 class="timeline-title">Accreditation</h3>
+              <p class="timeline-text">
+                Our institution received national accreditation, recognizing our
+                commitment to academic excellence and quality education.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2015</div>
+              <h3 class="timeline-title">Innovation Hub</h3>
+              <p class="timeline-text">
+                Launched a state-of-the-art innovation hub to foster research,
+                entrepreneurship, and industry collaboration among students and
+                faculty.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">2023</div>
+              <h3 class="timeline-title">Global Recognition</h3>
+              <p class="timeline-text">
+                Achieved recognition as one of the top 50 colleges nationwide,
+                with international partnerships and exchange programs with
+                universities across the globe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Our Leadership</h2>
+          <p class="section-subtitle">
+            Meet the dedicated individuals guiding our institution
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="team-card">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Dr. Robert Johnson"
+                class="team-img"
+              />
+              <div class="team-content">
+                <h3 class="team-name">Dr. Robert Johnson</h3>
+                <p class="team-position">President</p>
+                <p class="team-text">
+                  With over 25 years of experience in education leadership, Dr.
+                  Johnson has been instrumental in the college's growth and
+                  recognition.
+                </p>
+                <div class="team-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="team-card">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Dr. Emily Chen"
+                class="team-img"
+              />
+              <div class="team-content">
+                <h3 class="team-name">Dr. Emily Chen</h3>
+                <p class="team-position">Vice President, Academic Affairs</p>
+                <p class="team-text">
+                  Dr. Chen oversees all academic programs and ensures the
+                  highest standards of educational quality and innovation.
+                </p>
+                <div class="team-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="team-card">
+              <img
+                src="https://randomuser.me/api/portraits/men/67.jpg"
+                alt="Prof. Michael Davis"
+                class="team-img"
+              />
+              <div class="team-content">
+                <h3 class="team-name">Prof. Michael Davis</h3>
+                <p class="team-position">Dean, School of Engineering</p>
+                <p class="team-text">
+                  A renowned researcher and educator, Prof. Davis leads our
+                  engineering programs with a focus on innovation and practical
+                  skills.
+                </p>
+                <div class="team-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="team-card">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Dr. Sarah Williams"
+                class="team-img"
+              />
+              <div class="team-content">
+                <h3 class="team-name">Dr. Sarah Williams</h3>
+                <p class="team-position">Dean, School of Business</p>
+                <p class="team-text">
+                  With extensive industry experience, Dr. Williams bridges
+                  academic theory with real-world business practices in our
+                  programs.
+                </p>
+                <div class="team-social">
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <h2 class="cta-title">Join Our Academic Community</h2>
+            <p class="cta-text">
+              Become part of our diverse and vibrant community of learners,
+              educators, and innovators.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="register-new.html" class="btn btn-light btn-lg"
+              >Apply Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <a href="index.html" class="footer-logo">College</a>
+            <p class="footer-text">
+              Empowering minds, shaping futures. Our college is dedicated to
+              providing quality education and fostering a supportive learning
+              environment.
+            </p>
+            <div class="footer-social">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-lg-2 mb-5 mb-md-0">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="faculty.html">Faculty</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-lg-3 mb-5 mb-md-0">
+            <h4 class="footer-title">Programs</h4>
+            <ul class="footer-links">
+              <li><a href="#">Undergraduate Programs</a></li>
+              <li><a href="#">Graduate Programs</a></li>
+              <li><a href="#">Online Courses</a></li>
+              <li><a href="#">Professional Certifications</a></li>
+              <li><a href="#">Summer Programs</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-lg-3">
+            <h4 class="footer-title">Contact Info</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fa fa-map-marker me-2"></i> 123 Education Avenue,
+                Academic District, New York, NY 10001
+              </li>
+              <li><i class="fa fa-phone me-2"></i> +1 (123) 456-7890</li>
+              <li>
+                <i class="fa fa-envelope me-2"></i> info@collegeeducation.com
+              </li>
+              <li>
+                <i class="fa fa-clock-o me-2"></i> Monday - Friday: 8:00 AM -
+                5:00 PM
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2023 College Website. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
