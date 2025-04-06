@@ -1,190 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - College Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .login-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%),
+                url('https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      background-position: center;
+    }
+    .login-card {
+      max-width: 1000px;
+      width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .login-card .row {
+      margin: 0;
+    }
+    .login-form-col {
+      padding: 3rem;
+    }
+    .login-image-col {
+      background-color: #f1f3f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .login-image {
+      max-width: 100%;
+      height: auto;
+    }
+    .brand-logo {
+      color: #fd7e14;
+      font-size: 28px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .welcome-text {
+      font-size: 18px;
+      color: #495057;
+      margin-bottom: 2rem;
+    }
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 1.5rem;
+    }
+    .social-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .social-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    .facebook { background-color: #3b5998; }
+    .google { background-color: #db4437; }
+    .twitter { background-color: #1da1f2; }
+    .github { background-color: #333; }
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!--Fontawesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!--Costom CSS-->
-    <link rel="stylesheet" href="style.css" />
-    <title>College Website</title>
-  </head>
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 1.5rem 0;
+    }
+    .divider::before, .divider::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #dee2e6;
+    }
+    .divider span {
+      padding: 0 1rem;
+      color: #6c757d;
+      font-size: 14px;
+    }
+
+    .form-control {
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: 1px solid #dee2e6;
+      background-color: #f8f9fa;
+      margin-bottom: 1.5rem;
+    }
+    .form-control:focus {
+      box-shadow: 0 0 0 3px rgba(253,126,20,0.2);
+      border-color: #fd7e14;
+    }
+
+    .form-label {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-check-input:checked {
+      background-color: #fd7e14;
+      border-color: #fd7e14;
+    }
+
+    .forgot-password {
+      color: #fd7e14;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .forgot-password:hover {
+      color: #e06000;
+      text-decoration: underline;
+    }
+
+    .btn-login {
+      background-color: #fd7e14;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      color: white;
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .btn-login:hover {
+      background-color: #e06000;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(253,126,20,0.3);
+    }
+
+    .register-link {
+      color: #fd7e14;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .register-link:hover {
+      color: #e06000;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 767.98px) {
+      .login-image-col {
+        display: none;
+      }
+      .login-form-col {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-4"></div>
-
-            <div class="col-md-4">
-              <div class="card">
-                <h5 class="card-header text-center fw-bold">Login</h5>
-                <div class="card-body">
-      
-              
-              
-
-<!-- Pills content -->
-<div class="tab-content">
-  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-    <form>
-      <div class="text-center mb-3">
-        <p>Sign in with:</p>
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fa fa-facebook-f"></i>
-        </button>
-
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fa fa-google"></i>
-        </button>
-
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fa fa-twitter"></i>
-        </button>
-
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fa fa-github"></i>
-        </button>
+      <a class="navbar-brand fw-bold" href="index.html">College</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="courses.html">Courses</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="faculty.html">Faculty</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-      <p class="text-center">or:</p>
+  <!-- Login Section -->
+  <div class="login-container">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row">
+          <!-- Login Form Column -->
+          <div class="col-md-6 login-form-col">
+            <a href="index.html" class="brand-logo">College</a>
+            <p class="welcome-text">Welcome back! Please login to your account.</p>
 
-      <!-- Email input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">Email Address</label>
-        <input type="email" id="loginName" class="form-control" />
-        
-      </div>
+            <form action="#" method="post">
+              <!-- Social Login Buttons -->
+              <div class="social-login">
+                <a href="#" class="social-btn facebook"><i class="fa fa-facebook-f"></i></a>
+                <a href="#" class="social-btn google"><i class="fa fa-google"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="social-btn github"><i class="fa fa-github"></i></a>
+              </div>
 
-      <!-- Password input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginPassword">Password</label>
-        <input type="password" id="loginPassword" class="form-control" />
-        
-      </div>
+              <!-- Divider -->
+              <div class="divider">
+                <span>or login with email</span>
+              </div>
 
-      <!-- 2 column grid layout -->
-      <div class="row mb-4">
-        <div class="col-md-6 d-flex justify-content-center">
-          <!-- Checkbox -->
-          <div class="form-check mb-3 mb-md-0">
-            <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
-            <label class="form-check-label" for="loginCheck"> Remember me </label>
+              <!-- Email input -->
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+              </div>
+
+              <!-- Password input -->
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+              </div>
+
+              <!-- Remember me & Forgot password -->
+              <div class="d-flex justify-content-between mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="rememberMe">
+                  <label class="form-check-label" for="rememberMe">Remember me</label>
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-login">
+                Sign In <i class="fa fa-arrow-right ms-2"></i>
+              </button>
+
+              <!-- Register link -->
+              <div class="text-center">
+                <p>Don't have an account? <a href="register.html" class="register-link">Register</a></p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Image Column -->
+          <div class="col-md-6 login-image-col">
+            <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" alt="Login Illustration" class="login-image">
           </div>
         </div>
-
-        <div class="col-md-6 d-flex justify-content-center">
-          <!-- Simple link -->
-          <a href="#!">Forgot password?</a>
-        </div>
       </div>
-
-      <!-- Submit button -->
-      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
-
-      <!-- Register buttons -->
-      <div class="text-center">
-        <p>Not a member? <a href="register.html">Register</a></p>
-      </div>
-    </form>
-  </div>
-  <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-    <form>
-      <div class="text-center mb-3">
-        <p>Sign up with:</p>
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-facebook-f"></i>
-        </button>
-
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-google"></i>
-        </button>
-
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-twitter"></i>
-        </button>
-
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-github"></i>
-        </button>
-      </div>
-
-      <p class="text-center">or:</p>
-
-      <!-- Name input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        <input type="text" id="registerName" class="form-control" />
-        <label class="form-label" for="registerName">Name</label>
-      </div>
-
-      <!-- Username input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        <input type="text" id="registerUsername" class="form-control" />
-        <label class="form-label" for="registerUsername">Username</label>
-      </div>
-
-      <!-- Email input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        <input type="email" id="registerEmail" class="form-control" />
-        <label class="form-label" for="registerEmail">Email</label>
-      </div>
-
-      <!-- Password input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        <input type="password" id="registerPassword" class="form-control" />
-        <label class="form-label" for="registerPassword">Password</label>
-      </div>
-
-      <!-- Repeat Password input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        <input type="password" id="registerRepeatPassword" class="form-control" />
-        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-      </div>
-
-      <!-- Checkbox -->
-      <div class="form-check d-flex justify-content-center mb-4">
-        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
-          aria-describedby="registerCheckHelpText" />
-        <label class="form-check-label" for="registerCheck">
-          I have read and agree to the terms
-        </label>
-      </div>
-
-      <!-- Submit button -->
-      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-3">Sign in</button>
-    </form>
-  </div>
-</div>
-<!-- Pills content -->
-            </div>
-        </div>
-    </div>
-    </div>
     </div>
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-<script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
