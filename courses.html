@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Fontawesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css" />
+    <title>Courses - College Website</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header></header>
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">College</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link active" aria-current="page" href="courses.html"
+                >Courses</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="faculty.html">Faculty</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Navbar End-->
+
+    <!--Banner Section-->
+    <div class="container-fluid p-0">
+      <div class="position-relative">
+        <img
+          src="https://cdn.pixabay.com/photo/2020/05/06/16/03/giersch-5138121_960_720.jpg"
+          class="w-100"
+          style="height: 400px; object-fit: cover"
+          alt="Courses Banner"
+        />
+        <div
+          class="position-absolute top-0 left-0 w-100 h-100"
+          style="background-color: rgba(12, 11, 10, 0.5)"
+        ></div>
+        <div
+          class="position-absolute top-50 start-50 translate-middle text-center text-white"
+        >
+          <h1 class="fw-bold">
+            <span style="color: var(--bs-orange)">Our</span> Courses
+          </h1>
+          <p class="w-75 mx-auto">
+            Explore our comprehensive range of courses in Ayurvedic sciences and
+            research
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Courses Section-->
+    <main id="courses">
+      <div class="container my-5">
+        <h2 class="h2-responsive fw-bold text-center mb-4">
+          Academic Programs
+        </h2>
+        <p class="text-center w-responsive mx-auto mb-5">
+          Our institute offers a variety of specialized courses in Ayurvedic
+          medicine, botanical research, and pharmaceutical sciences to prepare
+          students for careers in traditional medicine and modern research.
+        </p>
+
+        <!-- Featured Courses -->
+        <div class="row mb-5">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm box">
+              <img
+                src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=600"
+                class="card-img-top"
+                alt="Microbiology Course"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">3 Years</span>
+                  <span class="text-muted small">30 Seats</span>
+                </div>
+                <h5 class="card-title">B.Sc. in Microbiology</h5>
+                <p class="card-text">
+                  Study microorganisms and their applications in Ayurvedic
+                  medicine. Learn about antimicrobial properties of traditional
+                  herbs and formulations.
+                </p>
+                <div class="mt-auto">
+                  <hr />
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-primary">₹45,000/year</span>
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm box">
+              <img
+                src="https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=600"
+                class="card-img-top"
+                alt="Pharmacy Course"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">4 Years</span>
+                  <span class="text-muted small">25 Seats</span>
+                </div>
+                <h5 class="card-title">B.Pharm in Ayurvedic Pharmacy</h5>
+                <p class="card-text">
+                  Learn formulation, preparation and standardization of
+                  Ayurvedic medicines with modern pharmaceutical techniques and
+                  quality control.
+                </p>
+                <div class="mt-auto">
+                  <hr />
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-primary">₹50,000/year</span>
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm box">
+              <img
+                src="https://factspharmacy.com/wp-content/uploads/2024/02/health-wellness-balanced-living-healthy-living-what-is-integrative-medicine-1440x1080-178800509.jpeg"
+                class="card-img-top"
+                alt="Pharmacognosy Course"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">3 Years</span>
+                  <span class="text-muted small">20 Seats</span>
+                </div>
+                <h5 class="card-title">M.Sc. in Pharmacognosy</h5>
+                <p class="card-text">
+                  Advanced study of medicinal plants, their identification,
+                  extraction methods, and therapeutic properties for drug
+                  development.
+                </p>
+                <div class="mt-auto">
+                  <hr />
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-primary">₹55,000/year</span>
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Courses -->
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm box">
+              <img
+                src="https://images.pexels.com/photos/1366942/pexels-photo-1366942.jpeg?auto=compress&cs=tinysrgb&w=600"
+                class="card-img-top"
+                alt="Chemistry Course"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">2 Years</span>
+                  <span class="text-muted small">25 Seats</span>
+                </div>
+                <h5 class="card-title">M.Sc. in Medicinal Chemistry</h5>
+                <p class="card-text">
+                  Study the chemical principles involved in drug design with
+                  focus on natural products and their synthetic modifications.
+                </p>
+                <div class="mt-auto">
+                  <hr />
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-primary">₹60,000/year</span>
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm box">
+              <img
+                src="https://images.pexels.com/photos/1643409/pexels-photo-1643409.jpeg?auto=compress&cs=tinysrgb&w=600"
+                class="card-img-top"
+                alt="Botany Course"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">3 Years</span>
+                  <span class="text-muted small">30 Seats</span>
+                </div>
+                <h5 class="card-title">B.Sc. in Botany (Medicinal Plants)</h5>
+                <p class="card-text">
+                  Comprehensive study of medicinal plants, their taxonomy,
+                  cultivation, conservation and sustainable harvesting
+                  practices.
+                </p>
+                <div class="mt-auto">
+                  <hr />
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-primary">₹40,000/year</span>
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm box">
+              <img
+                src="https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=600"
+                class="card-img-top"
+                alt="Research Course"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="badge bg-primary">1 Year</span>
+                  <span class="text-muted small">15 Seats</span>
+                </div>
+                <h5 class="card-title">
+                  PG Diploma in Ayurvedic Research Methodology
+                </h5>
+                <p class="card-text">
+                  Learn research methodologies specific to Ayurvedic sciences,
+                  including clinical trial design, data analysis and scientific
+                  writing.
+                </p>
+                <div class="mt-auto">
+                  <hr />
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span class="fw-bold text-primary">₹35,000/year</span>
+                    <a href="#" class="btn btn-outline-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificate Programs Section -->
+      <div class="bg-light py-5 mb-5">
+        <div class="container">
+          <h2 class="h2-responsive fw-bold text-center mb-4">
+            Certificate Programs
+          </h2>
+          <p class="text-center w-responsive mx-auto mb-5">
+            Short-term certificate courses designed for professionals and
+            enthusiasts looking to enhance their knowledge in specific areas of
+            Ayurvedic sciences.
+          </p>
+
+          <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                  <div
+                    class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i class="fa fa-leaf fa-2x"></i>
+                  </div>
+                  <h5 class="card-title">Medicinal Plant Identification</h5>
+                  <p class="card-text small">
+                    3-month course on identifying and classifying medicinal
+                    plants used in Ayurvedic formulations.
+                  </p>
+                  <p class="text-primary fw-bold">₹15,000</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                  <div
+                    class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i class="fa fa-flask fa-2x"></i>
+                  </div>
+                  <h5 class="card-title">Ayurvedic Formulation Techniques</h5>
+                  <p class="card-text small">
+                    4-month hands-on training in preparation of various
+                    Ayurvedic formulations and quality control.
+                  </p>
+                  <p class="text-primary fw-bold">₹20,000</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                  <div
+                    class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i class="fa fa-pagelines fa-2x"></i>
+                  </div>
+                  <h5 class="card-title">Cultivation of Medicinal Plants</h5>
+                  <p class="card-text small">
+                    6-month course on cultivation, harvesting and post-harvest
+                    management of medicinal plants.
+                  </p>
+                  <p class="text-primary fw-bold">₹25,000</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                  <div
+                    class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i class="fa fa-book fa-2x"></i>
+                  </div>
+                  <h5 class="card-title">Ayurvedic Manuscript Studies</h5>
+                  <p class="card-text small">
+                    3-month course on reading, interpreting and analyzing
+                    ancient Ayurvedic manuscripts and texts.
+                  </p>
+                  <p class="text-primary fw-bold">₹18,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admission Process Section -->
+      <div class="container mb-5">
+        <h2 class="h2-responsive fw-bold text-center mb-4">
+          Admission Process
+        </h2>
+        <p class="text-center w-responsive mx-auto mb-5">
+          Our admission process is designed to select candidates with a strong
+          academic background and genuine interest in Ayurvedic sciences.
+        </p>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="card shadow-sm">
+              <div class="card-body p-4">
+                <div class="timeline">
+                  <div class="row mb-4">
+                    <div class="col-md-1 text-center">
+                      <div
+                        class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto"
+                        style="width: 40px; height: 40px"
+                      >
+                        <span>1</span>
+                      </div>
+                    </div>
+                    <div class="col-md-11">
+                      <h5 class="section-heading">Application Submission</h5>
+                      <p>
+                        Complete the online application form and submit required
+                        documents including academic transcripts, ID proof, and
+                        passport-sized photographs.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="row mb-4">
+                    <div class="col-md-1 text-center">
+                      <div
+                        class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto"
+                        style="width: 40px; height: 40px"
+                      >
+                        <span>2</span>
+                      </div>
+                    </div>
+                    <div class="col-md-11">
+                      <h5 class="section-heading">Entrance Examination</h5>
+                      <p>
+                        Qualifying candidates will be invited to take a written
+                        entrance examination testing their knowledge in relevant
+                        subjects.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="row mb-4">
+                    <div class="col-md-1 text-center">
+                      <div
+                        class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto"
+                        style="width: 40px; height: 40px"
+                      >
+                        <span>3</span>
+                      </div>
+                    </div>
+                    <div class="col-md-11">
+                      <h5 class="section-heading">Personal Interview</h5>
+                      <p>
+                        Shortlisted candidates will be called for a personal
+                        interview to assess their motivation, aptitude, and
+                        suitability for the chosen program.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-1 text-center">
+                      <div
+                        class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto"
+                        style="width: 40px; height: 40px"
+                      >
+                        <span>4</span>
+                      </div>
+                    </div>
+                    <div class="col-md-11">
+                      <h5 class="section-heading">Admission Confirmation</h5>
+                      <p>
+                        Selected candidates will receive an admission offer
+                        letter. Confirm your admission by paying the required
+                        fees within the specified timeframe.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <a href="#" class="btn btn-primary px-4 py-2">Apply Now</a>
+              <a href="#" class="btn btn-outline-primary px-4 py-2 ms-2"
+                >Download Brochure</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-beige tertiary text-white">
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fa fa-home me-3"></i>CARI Jhansi
+              </h6>
+              <p>
+                Central Ayurved Research Institute, Jhansi is dedicated to
+                research and development in the field of Ayurvedic medicine and
+                plant sciences.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Quick Links</h6>
+              <p>
+                <a href="index.html" class="text-reset">Home</a>
+              </p>
+              <p>
+                <a href="About.html" class="text-reset">About</a>
+              </p>
+              <p>
+                <a href="courses.html" class="text-reset">Courses</a>
+              </p>
+              <p>
+                <a href="faculty.html" class="text-reset">Faculty</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a href="#" class="text-reset">Research</a>
+              </p>
+              <p>
+                <a href="#" class="text-reset">Publications</a>
+              </p>
+              <p>
+                <a href="#" class="text-reset">Resources</a>
+              </p>
+              <p>
+                <a href="#" class="text-reset">FAQ</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <i class="fa fa-home me-3"></i> Bundelkhand Area, Jhansi, UP,
+                India
+              </p>
+              <p>
+                <i class="fa fa-envelope me-3"></i>
+                info@carijhansi.org
+              </p>
+              <p><i class="fa fa-phone me-3"></i> + 91 123 456 7890</p>
+              <p><i class="fa fa-print me-3"></i> + 91 123 456 7891</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="#">CARI Jhansi</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
